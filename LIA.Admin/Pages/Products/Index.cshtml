@@ -1,0 +1,65 @@
+﻿@page
+@model LIA.Admin.Pages.Products.IndexModel
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+	<a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Product[0].Name)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Product[0].Image)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Product[0].Price)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Product[0].Date)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Product[0].Description)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model.Product)
+		{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Name)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Image)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Price)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Date)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Description)
+			</td>
+			<td>
+			<a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
+			<a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+			</td>
+		</tr>
+
+			//public string Name { get; set; }
+			//public string Image { get; set; }
+			//public int Price { get; set; }
+			//public DateTime Date { get; set; }
+			//public string Description { get; set; }
+		}
+	</tbody>
+</table>

@@ -1,0 +1,43 @@
+﻿@page
+@model LIA.Admin.Pages.UserProducts.IndexModel
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h2>Test</h2>
+
+<p>
+	<a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.UserProduct[0].User.Email)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.UserProduct[0].Product.Name)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var up in Model.UserProduct)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => up.User.Email)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => up.Product.Name)
+				</td>
+				<td>
+					@*<a asp-page="./Edit" asp-route-id="@item.ItemId">Edit</a> |
+					<a asp-page="./Details" asp-route-id="@item.ItemId">Details</a> |*@
+					<a asp-page="./Delete" id-userId="@up.UserId" id-productId="@up.ProductId">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
