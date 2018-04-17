@@ -27,8 +27,8 @@
 					@Html.DisplayFor(modelItem => item.Name)
 				</td>
 				<td>
-					<a asp-page="./Edit" asp-route-id="@item.ItemTypeId">Edit</a> |
-					<a asp-page="./Delete" asp-route-id="@item.ItemTypeId">Delete</a>
+					<a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+					<a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
 				</td>
 			</tr>
 		}

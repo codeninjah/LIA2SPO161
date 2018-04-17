@@ -25,7 +25,6 @@ namespace LIA.Admin.Pages.ItemTypes
 			_reader = reader;
 		}
 
-
 		//TILLLAGD
 		[BindProperty]
 		public ItemType ItemType { get; set; }

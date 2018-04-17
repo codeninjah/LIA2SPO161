@@ -6,7 +6,7 @@
 }
 
 <h2>Edit</h2>
-@*public int ProductId { get; set; }
+@*public int Id { get; set; }
 		public string Name { get; set; }
 		public string Image { get; set; }
 		public int Price { get; set; }
@@ -18,7 +18,7 @@
 	<div class="col-md-4">
 		<form method="post">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-			<input type="hidden" asp-for="Product.ProductId" />
+			<input type="hidden" asp-for="Product.Id" />
 			<div class="form-group">
 				<label asp-for="Product.Name" class="control-label"></label>
 				<input asp-for="Product.Name" class="form-control" />

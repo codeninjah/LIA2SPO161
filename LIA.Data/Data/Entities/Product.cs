@@ -9,7 +9,7 @@ namespace LIA2Version3.Data.Entities
     public class Product
     {
 		[Key]
-		public int ProductId { get; set; }
+		public int Id { get; set; }
 		public string Name { get; set; }
 		public string Image { get; set; }
 		public int Price { get; set; }

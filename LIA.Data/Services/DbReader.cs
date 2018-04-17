@@ -65,11 +65,11 @@ namespace LIA.Data.Services
 
 		private (IEnumerable<string> collections, IEnumerable<string> references) GetEntityNames<TEntity>() where TEntity : class
 		{
-			//Hämtar ut alla properties av typen DbSet i VideoContext
-			var dbsets = typeof(VideoContext)
-				.GetProperties(BindingFlags.Public | BindingFlags.Instance)
-				.Where(z => z.PropertyType.Name.Contains("DbSet"))
-				.Select(z => z.Name);
+				//Hämtar ut alla properties av typen DbSet i VideoContext
+				var dbsets = typeof(VideoContext)
+					.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+					.Where(z => z.PropertyType.Name.Contains("DbSet"))
+					.Select(z => z.Name);
 
 			// Get the names of all the properties (tables) in the generic
 			// type T that is represented by a DbSet

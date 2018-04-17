@@ -28,7 +28,7 @@ namespace LIA.Admin.Pages.Slask
                 return NotFound();
             }
 
-            ItemType = await _context.ItemTypes.SingleOrDefaultAsync(m => m.ItemTypeId == id);
+            ItemType = await _context.ItemTypes.SingleOrDefaultAsync(m => m.Id == id);
 
             if (ItemType == null)
             {

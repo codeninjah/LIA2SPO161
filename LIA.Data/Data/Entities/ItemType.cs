@@ -9,7 +9,7 @@ namespace LIA2Version3.Data.Entities
     public class ItemType
     {
 		[Key]
-		public int ItemTypeId { get; set; }
+		public int Id { get; set; }
 		public string Name { get; set; }
 	}
 }

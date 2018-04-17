@@ -30,7 +30,7 @@ namespace LIA.Admin.Pages.UserProducts
 		[BindProperty]
 		public UserProduct UserProduct { get; set; }
 
-		public void  OnGet(string userid, int productid)
+		public void  OnGet(string userid, int Id)
 		{
 			var test = _reader.Get(userid);
 		}

@@ -30,7 +30,7 @@ namespace LIA.Admin.Pages.Slask
                 return NotFound();
             }
 
-            ItemType = await _context.ItemTypes.SingleOrDefaultAsync(m => m.ItemTypeId == id);
+            ItemType = await _context.ItemTypes.SingleOrDefaultAsync(m => m.Id == id);
 
             if (ItemType == null)
             {
@@ -54,7 +54,7 @@ namespace LIA.Admin.Pages.Slask
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ItemTypeExists(ItemType.ItemTypeId))
+                if (!ItemTypeExists(ItemType.Id))
                 {
                     return NotFound();
                 }
@@ -69,7 +69,7 @@ namespace LIA.Admin.Pages.Slask
 
         private bool ItemTypeExists(int id)
         {
-            return _context.ItemTypes.Any(e => e.ItemTypeId == id);
+            return _context.ItemTypes.Any(e => e.Id == id);
         }
     }
 }

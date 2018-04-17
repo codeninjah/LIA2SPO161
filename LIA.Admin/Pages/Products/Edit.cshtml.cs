@@ -55,7 +55,7 @@ namespace LIA.Admin.Pages.Products
 			}
 			catch (DbUpdateConcurrencyException)
 			{
-				//if (!ItemTypeExists(ItemType.ItemTypeId))
+				//if (!ItemTypeExists(ItemType.Id))
 				//{
 				//	return NotFound();
 				//}

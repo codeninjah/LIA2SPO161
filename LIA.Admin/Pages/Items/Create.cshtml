@@ -20,6 +20,13 @@
 				<label asp-for="Items.Description" class="control-label"></label>
 				<input asp-for="Items.Description" class="form-control" />
 
+				</div>
+
+				<div class="form-group">
+				<label asp-for="Items.Id" class="control-label"></label>
+				<select asp-for="Items.Id" class="form-control" asp-items="ViewBag.ItemTypes"></select>
+				
+				<span asp-validation-for="Items.Id" class="text-danger"></span>
 				<span asp-validation-for="Items.Description" class="text-danger"></span>
 				<span asp-validation-for="Items.Name" class="text-danger"></span>
 			</div>

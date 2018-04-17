@@ -24,7 +24,8 @@ namespace LIA.Admin.Pages.ListItems
 
 		public void OnGet()
 		{
-			ListItem = _db.Get<ListItem>().ToList();
+			ListItem = _db.GetWithIncludes<ListItem>().ToList();
+			//ListItem = _db.Get<ListItem>().ToList();
 		}
 	}
 }

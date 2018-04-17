@@ -23,7 +23,7 @@ namespace LIA.Admin.Pages.UserProducts
 		public void OnGet()
 		{
 			ViewData["Users"] = _reader.GetSelectList<User>("Id", "Email");
-			ViewData["Products"] = _reader.GetSelectList<Product>("ProductId", "Name");
+			ViewData["Products"] = _reader.GetSelectList<Product>("Id", "Name");
 		}
 
 		[BindProperty]
@@ -47,7 +47,7 @@ namespace LIA.Admin.Pages.UserProducts
 			}
 			catch { }
 			ViewData["Users"] = _reader.GetSelectList<User>("Id", "Email");
-			ViewData["Products"] = _reader.GetSelectList<Product>("ProductId", "Name");
+			ViewData["Products"] = _reader.GetSelectList<Product>("Id", "Name");
 
 			return Page();
 		}

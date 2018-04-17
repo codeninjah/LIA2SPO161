@@ -32,6 +32,10 @@ namespace LIA.Admin.Pages.Items
 				return NotFound();
 			}
 
+			ViewData["ItemTypes"] = _reader.GetSelectList<ItemType>("Id", "Name");
+			
+			//ViewData["Products"] = _reader.GetSelectList<Product>("Id", "Name");
+
 			Item = await _reader.Get<Item>((int)id);
 
 			if (Item == null)
@@ -55,7 +59,7 @@ namespace LIA.Admin.Pages.Items
 			}
 			catch (DbUpdateConcurrencyException)
 			{
-				//if (!ItemTypeExists(ItemType.ItemTypeId))
+				//if (!ItemTypeExists(ItemType.Id))
 				//{
 				//	return NotFound();
 				//}

@@ -9,9 +9,10 @@ namespace LIA2Version3.Data.Entities
     public class Item
     {
 		[Key]
-		public int ItemId { get; set; }
+		public int Id { get; set; }
 		public string Name { get; set; }
 		public int ItemTypeId { get; set; }
+		public ItemType ItemType { get; set; }
 
 		[MaxLength(50)]
 		public string Description { get; set; }

@@ -10,17 +10,22 @@ namespace LIA.Admin.Pages.ListItems
 {
 	public class CreateModel : PageModel
 	{
-		public IActionResult OnGet()
-		{
-			return Page();
-		}
-
+		
 		private readonly LIA.Data.Services.IDbWriter _db;
+		private readonly LIA.Data.Services.IDbReader _reader;
 
-		public CreateModel(LIA.Data.Services.IDbWriter db)
+		public CreateModel(LIA.Data.Services.IDbWriter db, LIA.Data.Services.IDbReader reader)
 		{
 			_db = db;
+			_reader = reader;
 		}
+
+		public void OnGet()
+		{
+			ViewData["Products"] = _reader.GetSelectList<Product>("Id", "Name");
+			ViewData["Items"] = _reader.GetSelectList<Item>("Id", "Name");
+		}
+
 
 		[BindProperty]
 		public ListItem ListItem { get; set; }
