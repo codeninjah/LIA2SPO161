@@ -30,19 +30,20 @@ namespace LIA.Admin.Pages.UserProducts
 		[BindProperty]
 		public UserProduct UserProduct { get; set; }
 
-		public void  OnGet(string userid, int Id)
+		public void  OnGet(string userid, int productid)
 		{
 			var test = _reader.Get(userid);
+			
 		}
 
-		public async Task<IActionResult> OnPostAsync(int? id)
+		public async Task<IActionResult> OnPostAsync(string userid, int? productid)
 		{
-			if (id == null)
+			if (userid == null || productid == null)
 			{
 				return NotFound();
 			}
 
-			UserProduct = await _reader.Get<UserProduct>((int)id);
+			UserProduct = _reader.Get<UserProduct>(userid, (int)productid);
 
 			if (UserProduct != null)
 			{
