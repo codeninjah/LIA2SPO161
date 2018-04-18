@@ -55,7 +55,11 @@ namespace LIA.Admin.Pages.ItemTypes
 
 			if (ItemType != null)
 			{
-				await _db.Remove<ItemType>(ItemType);
+				try
+				{
+					await _db.Remove<ItemType>(ItemType);
+				}
+				catch { }
 			}
 
 			return RedirectToPage("./Index");
