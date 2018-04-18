@@ -16,12 +16,13 @@
 			@Html.DisplayNameFor(model => model.UserProduct.UserId)
 		</dt>
 		<dd>
-			@Html.DisplayFor(model => model.UserProduct.Id)
+			@Html.DisplayFor(model => model.UserProduct.ProductId)
 		</dd>
 	</dl>
 
 	<form method="post">
-		@*<input type="hidden" asp-for="ItemType.Id" />*@
+		<input type="hidden" asp-for="UserProduct.UserId" />
+		<input type="hidden" asp-for="UserProduct.ProductId" />
 		<input type="submit" value="Delete" class="btn btn-default" /> |
 		<a asp-page="./Index">Back to List</a>
 	</form>
