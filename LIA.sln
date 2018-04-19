@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIA.Data", "LIA.Data\LIA.Data.csproj", "{49E1A749-9FD7-4092-964D-B3FA490E76A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LIA.Data", "LIA.Data\LIA.Data.csproj", "{49E1A749-9FD7-4092-964D-B3FA490E76A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIA.Admin", "LIA.Admin\LIA.Admin.csproj", "{05C03C25-AFAE-42C8-BB60-B2BD55E6A5D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LIA.Admin", "LIA.Admin\LIA.Admin.csproj", "{05C03C25-AFAE-42C8-BB60-B2BD55E6A5D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIA.UI", "LIA.UI\LIA.UI.csproj", "{B29DD3D4-2ABD-4E14-867F-80C63D5BA248}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{05C03C25-AFAE-42C8-BB60-B2BD55E6A5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05C03C25-AFAE-42C8-BB60-B2BD55E6A5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05C03C25-AFAE-42C8-BB60-B2BD55E6A5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29DD3D4-2ABD-4E14-867F-80C63D5BA248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29DD3D4-2ABD-4E14-867F-80C63D5BA248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29DD3D4-2ABD-4E14-867F-80C63D5BA248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29DD3D4-2ABD-4E14-867F-80C63D5BA248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
