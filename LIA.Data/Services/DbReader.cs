@@ -38,18 +38,13 @@ namespace LIA.Data.Services
 			return _db.Set<User>().Find(new object[] { userId });
 		}
 
-		public List<TEntity> GetProducts<TEntity>() where TEntity : class
-		{
-			return _db.Set<TEntity>().ToList();
-		}
-
 		public SelectList GetSelectList<TEntity>(string valueField, string textField) where TEntity : class
 		{
 			var items = Get<TEntity>();
 			return new SelectList(items, valueField, textField);
 		}
 
-		public IEnumerable<TEntity> GetWithIncludes<TEntity>() where TEntity : class
+		public IQueryable<TEntity> GetWithIncludes<TEntity>() where TEntity : class
 		{
 			//Tar fram namnen
 			var entityNames = GetEntityNames<TEntity>();
@@ -92,5 +87,15 @@ namespace LIA.Data.Services
 			return (collections: collections, references: classes);
 		}
 
+		public List<Product> GetProducts(string userId)
+		{
+			var products =
+				from uproduct in _db.UserProducts
+				join prod in _db.Products on uproduct.ProductId equals prod.Id
+				where uproduct.UserId == userId
+ 				select prod;
+
+			return products.ToList();
+		}
 	}
 }

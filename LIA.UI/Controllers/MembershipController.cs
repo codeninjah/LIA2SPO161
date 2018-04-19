@@ -6,24 +6,34 @@ using Microsoft.AspNetCore.Mvc;
 using LIA.Data.Services;
 using LIA2Version3.Data.Entities;
 using LIA.UI.Models.Membership;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LIA.UI.Controllers
 {
-    public class MembershipController : Controller
+	[Authorize]
+	public class MembershipController : Controller
     {
 		private IDbReader _reader;
+		private UserManager<User> _userManager;
+		private SignInManager<User> _signInManager;
+		private string userId;
 
-		public MembershipController(IDbReader reader)
+		public MembershipController(IDbReader reader, UserManager<User> userManager, SignInManager<User> signInManager)
 		{
 			_reader = reader;
+			_userManager = userManager;
+			_signInManager = signInManager;
+			 userId = _userManager.GetUserId(_signInManager.Context.User);
 		}
 
 		public IActionResult Dashboard()
-        {
+        {			
+			
 			var model = new DashboardViewModel();
 			model.Products = new List<List<Product>>();
 
-			var products = _reader.Get<Product>();
+			var products = _reader.GetProducts(userId);
 
 			var numRows = products.Count() <= 3 ? 1 :
 				products.Count() / 3;
@@ -35,5 +45,17 @@ namespace LIA.UI.Controllers
 
 			return View(model);
         }
-    }
+
+		public IActionResult Product(int productId)
+		{
+			var product = _reader.Get<Product>(productId).Result;
+			var module = _reader.GetWithIncludes<ListItem>().Where(
+				x => x.ProductId == productId);
+
+			var model = new ProductViewModel { Product = product, ListItems = module.ToList() };
+
+			return View(model);
+		}
+	}
+
 }

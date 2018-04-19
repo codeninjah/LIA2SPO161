@@ -9,10 +9,10 @@ namespace LIA.Data.Services
 {
     public interface IDbReader
     {
-        List<TEntity> GetProducts<TEntity>() where TEntity : class;
+		List<Product> GetProducts(string userId);
 		IQueryable<TEntity> Get<TEntity>() where TEntity : class;
 		Task<TEntity> Get<TEntity>(int id) where TEntity : class;
-		IEnumerable<TEntity> GetWithIncludes<TEntity>() where TEntity : class;
+		IQueryable<TEntity> GetWithIncludes<TEntity>() where TEntity : class;
 		SelectList GetSelectList<TEntity>(string valueString, string textField) where TEntity : class;
 		TEntity Get<TEntity>(string userId, int id) where TEntity : class;
 		User Get(string userId);

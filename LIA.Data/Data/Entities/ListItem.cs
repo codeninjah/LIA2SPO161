@@ -18,7 +18,7 @@ namespace LIA2Version3.Data.Entities
 		public Product Product { get; set; }
 		public Item Item { get; set; }
 		//public ICollection<Product> Products { get; set; }
-		//public ICollection<Item> Items { get; set; }
+		public List<Item> Items { get; set; }
 
 	}
 }
