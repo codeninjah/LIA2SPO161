@@ -1,7 +1,19 @@
-﻿
+﻿@using LIA2Version3.Data.Entities
+
+@model List<Product>
+
 @{
-    ViewData["Title"] = "Index";
+	ViewData["Title"] = "Index";
 }
 
 <h2>Index</h2>
+@foreach (var product in Model)
+{
+	<div class="panel">@product.Image</div>
+	<div class="panel">@product.Name</div>
+	<div class="panel">@product.Description</div>
+}
+
+
+
 

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using LIA.UI.Services;
 using LIA.Data.Data;
 using LIA2Version3.Data.Entities;
+using LIA.Data.Services;
 
 namespace LIA.UI
 {
@@ -35,8 +36,9 @@ namespace LIA.UI
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+			services.AddTransient<IDbReader, DbReader>();
 
-            services.AddMvc();
+			services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
