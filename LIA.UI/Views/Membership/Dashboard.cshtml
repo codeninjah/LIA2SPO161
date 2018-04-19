@@ -1,18 +1,29 @@
 ﻿@using LIA2Version3.Data.Entities
+@using LIA.UI.Models.Membership
 
-@model List<Product>
+@model DashboardViewModel
 
 @{
 	ViewData["Title"] = "Index";
 }
 
 <h2>Index</h2>
-@foreach (var product in Model)
-{
-	<div class="panel">@product.Image</div>
-	<div class="panel">@product.Name</div>
-	<div class="panel">@product.Description</div>
-}
+
+		@foreach (var products in Model.Products)
+		{
+			<div class="row">
+			@foreach (var product in products)
+			{
+			<div class="panel col-sm-4">
+				<img class="image" src="@product.Image">
+				<div class="panel-body">
+					<div>@product.Name</div>
+					<div>@product.Description</div>
+				</div>
+			</div>
+			}
+			</div>
+		}
 
 
 

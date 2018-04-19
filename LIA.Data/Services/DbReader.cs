@@ -38,6 +38,11 @@ namespace LIA.Data.Services
 			return _db.Set<User>().Find(new object[] { userId });
 		}
 
+		public List<TEntity> GetProducts<TEntity>() where TEntity : class
+		{
+			return _db.Set<TEntity>().ToList();
+		}
+
 		public SelectList GetSelectList<TEntity>(string valueField, string textField) where TEntity : class
 		{
 			var items = Get<TEntity>();
