@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using LIA.UI.Models;
 using LIA.UI.Services;
 using LIA.Data.Data;
 using LIA2Version3.Data.Entities;
