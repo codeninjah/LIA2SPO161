@@ -20,15 +20,18 @@
 				<label asp-for="Items.Description" class="control-label"></label>
 				<input asp-for="Items.Description" class="form-control" />
 
+				<label asp-for="Items.Link" class="control-label"></label>
+				<input asp-for="Items.Link" class="form-control" />
 				</div>
 
-				<div class="form-group">
+			<div class="form-group">
 				<label asp-for="Items.ItemTypeId" class="control-label"></label>
 				<select asp-for="Items.ItemTypeId" class="form-control" asp-items="ViewBag.ItemTypes"></select>
-				
+
 				<span asp-validation-for="Items.ItemTypeId" class="text-danger"></span>
 				<span asp-validation-for="Items.Description" class="text-danger"></span>
 				<span asp-validation-for="Items.Name" class="text-danger"></span>
+				<span asp-validation-for="Items.Link" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<input type="submit" value="Create" class="btn btn-default" />

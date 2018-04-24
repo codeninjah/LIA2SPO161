@@ -36,6 +36,9 @@
 				@Html.DisplayFor(modelItem => item.ItemType.Name)
 			</td>
 			<td>
+				@Html.DisplayFor(modelItem => item.Link)
+			</td>
+			<td>
 				<a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
 				<a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
 			</td>

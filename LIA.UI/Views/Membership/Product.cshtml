@@ -27,7 +27,7 @@
 }
 		@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
 	{
-		<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">@item.Name</a>
+		<a href="@item.Link" target="_blank">@item.Name</a>
 		<div>@item.Description</div>
 }
 }

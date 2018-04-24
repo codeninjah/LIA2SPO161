@@ -8,3 +8,18 @@
 
 <h2>Test</h2>
 
+@if (Model.Link != null)
+{
+	<div id="hiddenUrl" hidden="hidden">@Model.Link</div>
+	<video id="video" class="video-js vsj-default-skin vjs-big-play-centered vjs-16-9" controls preload="auto"> </video>
+}
+
+	@section scripts
+		{
+		<script type="text/javascript">
+			$(function () {
+				
+				videoJS($("#hiddenUrl").text());
+			});
+		</script>
+	}
