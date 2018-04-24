@@ -56,6 +56,15 @@ namespace LIA.UI.Controllers
 
 			return View(model);
 		}
+		
+		public async Task<IActionResult> Item(int itemId)
+		{
+			var item = await _reader.Get<Item>(itemId);
+
+			//var model = new ProductViewModel { Product = product, ListItems = module.ToList() };
+
+			return View(item);
+		}
 	}
 
 }

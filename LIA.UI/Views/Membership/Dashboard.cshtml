@@ -17,13 +17,13 @@
 				<div class="panel col-sm-4 ruta">
 					<img class="image" src="@product.Image">
 					<div class="panel-body">
-						<div>@product.Name</div>
+						<div class="title">@product.Name</div>
 						<div>@product.Description</div>
-						<div class="button-dashboard">
-							<a asp-controller="Membership" asp-action="Product" asp-route-productId="@product.Id">
-								<button type="button" class="btn btn-primary">To Product</button>
+						@*<div class="button-dashboard">*@
+							<a class="btn btn-primary button-dashboard" asp-controller="Membership" asp-action="Product" asp-route-productId="@product.Id">
+								To Product
 								</a>
-						</div>
+						@*</div>*@
 						
 					</div>
 				</div>

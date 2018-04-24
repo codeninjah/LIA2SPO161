@@ -13,6 +13,7 @@ namespace LIA2Version3.Data.Entities
 		public string Name { get; set; }
 		public int ItemTypeId { get; set; }
 		public ItemType ItemType { get; set; }
+		public string Link { get; set; }
 
 		[MaxLength(50)]
 		public string Description { get; set; }

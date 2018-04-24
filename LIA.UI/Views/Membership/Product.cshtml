@@ -8,24 +8,29 @@
 }
 
 <h2>Product</h2>
-<a asp-controller="Home" asp-action="Index">
-	<button type="button" class="btn btn-primary">Dashboard</button>
+<a class="btn btn-primary" asp-controller="Home" asp-action="Index">
+	Dashboard
 </a>
 
 <div class="panel col-sm-12">
 	<img class="image-product" src="@Model.Product.Image">
 	<div class="panel-body">
-		<div class="title-product">@Model.Product.Name</div>
+		<div class="title">@Model.Product.Name</div>
 		<div>@Model.Product.Description</div>
 		@foreach (var listitem in Model.ListItems)
-		{
-		<div>@listitem.Name</div>
-		@foreach (var item in listitem.Items)
-		{
-		<div>@item.Name</div>
+	{
+		<div class="title">@listitem.Name</div>
+		@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(2)))
+	{
+		<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">@item.Name</a>
 		<div>@item.Description</div>
-		}
-		}
+}
+		@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
+	{
+		<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">@item.Name</a>
+		<div>@item.Description</div>
+}
+}
 	</div>
 </div>
 
