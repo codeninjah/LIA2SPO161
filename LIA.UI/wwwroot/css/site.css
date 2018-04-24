@@ -46,7 +46,16 @@
 
 .title {
 	font-weight: 900;
+	font-size: 30px;
+}
+
+.Itemtitle {
+	font-weight: 300;
 	font-size: 20px;
+	background-color: #F8F8F8;
+	height: 50px;
+	display: flex;
+	align-items: center; /* Vertical center alignment */
 }
 
 .ruta {
@@ -61,4 +70,6 @@
 	bottom: -100px;*/
 	margin-top: 10px;
 }
+
+
 

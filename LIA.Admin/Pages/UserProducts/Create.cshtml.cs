@@ -6,9 +6,11 @@ using LIA2Version3.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using LIA.Data.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LIA.Admin.Pages.UserProducts
 {
+	[Authorize(Roles = "Admin")]
 	public class CreateModel : PageModel
 	{
 		private readonly IDbWriter _writer;

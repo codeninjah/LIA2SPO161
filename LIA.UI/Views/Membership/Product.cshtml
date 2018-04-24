@@ -12,14 +12,15 @@
 	Dashboard
 </a>
 
-<div class="panel col-sm-12">
+<div class="panel col-sm-12 panel-default">
 	<img class="image-product" src="@Model.Product.Image">
-	<div class="panel-body">
+	
 		<div class="title">@Model.Product.Name</div>
-		<div>@Model.Product.Description</div>
+		<div class="panel-body">@Model.Product.Description
 		@foreach (var listitem in Model.ListItems)
 	{
-		<div class="title">@listitem.Name</div>
+			<hr />
+		<div class="Itemtitle">@listitem.Name</div>
 		@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(2)))
 	{
 		<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">@item.Name</a>
@@ -32,5 +33,6 @@
 }
 }
 	</div>
+</div>
 </div>
 

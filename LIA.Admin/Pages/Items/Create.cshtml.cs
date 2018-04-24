@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LIA2Version3.Data.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace LIA.Admin.Pages.Items
 {
+	[Authorize(Roles = "Admin")]
 	public class CreateModel : PageModel
 	{
 

@@ -6,10 +6,12 @@ using LIA2Version3.Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LIA.Admin.Pages.ItemTypes
 {
-    public class DeleteModel : PageModel
+	[Authorize(Roles = "Admin")]
+	public class DeleteModel : PageModel
     {
 		//public IActionResult OnGet()
 		//{

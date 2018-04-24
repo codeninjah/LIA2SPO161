@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using LIA.Data.Data;
 using LIA2Version3.Data.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace LIA.Admin.Pages.ListItems
 {
+	[Authorize(Roles = "Admin")]
 	public class EditModel : PageModel
 	{
 		private readonly LIA.Data.Services.IDbWriter _writer;
