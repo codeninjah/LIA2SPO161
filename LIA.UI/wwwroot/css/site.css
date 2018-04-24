@@ -39,4 +39,12 @@
 	height: 120px;
 }
 
+.image-product {
+	width: 100%;
+	height: 300px;
+}
 
+.title-product {
+	font-weight: 900;
+	font-size: 20px;
+}

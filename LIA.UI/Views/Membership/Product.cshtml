@@ -9,6 +9,20 @@
 
 <h2>Product</h2>
 
-<div class="panel">
-	<img class="image" src="@Model.Product.Image">
+<div class="panel col-sm-12">
+	<img class="image-product" src="@Model.Product.Image">
+	<div class="panel-body">
+		<div class="title-product">@Model.Product.Name</div>
+		<div>@Model.Product.Description</div>
+		@foreach (var listitem in Model.ListItems)
+		{
+		<div>@listitem.Name</div>
+		@foreach (var item in listitem.Items)
+		{
+		<div>@item.Name</div>
+		<div>@item.Description</div>
+		}
+		}
+	</div>
 </div>
+
