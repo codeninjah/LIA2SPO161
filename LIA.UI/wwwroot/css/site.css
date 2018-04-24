@@ -48,3 +48,16 @@
 	font-weight: 900;
 	font-size: 20px;
 }
+
+.ruta {
+	display: flex;
+	height: 200px;
+	flex-flow: row wrap;
+	/* Then we define how is distributed the remaining space */
+}
+
+.button-dashboard {
+	position: absolute;
+	bottom: -100px;
+}
+

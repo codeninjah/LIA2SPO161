@@ -7,20 +7,24 @@
 	ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Dashboard</h2>
 
 		@foreach (var products in Model.Products)
 		{
 			<div class="row">
 			@foreach (var product in products)
 			{
-				<div class="align-self-stretch"></div>
-				<div class="panel col-sm-4 ">
+				<div class="panel col-sm-4 ruta">
 					<img class="image" src="@product.Image">
 					<div class="panel-body">
 						<div>@product.Name</div>
 						<div>@product.Description</div>
-						<a asp-controller="Membership" asp-action="Product" asp-route-productId="@product.Id">TEST</a>
+						<div class="button-dashboard">
+							<a asp-controller="Membership" asp-action="Product" asp-route-productId="@product.Id">
+								<button type="button" class="btn btn-primary">To Product</button>
+								</a>
+						</div>
+						
 					</div>
 				</div>
 			}
