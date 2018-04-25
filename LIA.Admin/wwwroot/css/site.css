@@ -1,6 +1,11 @@
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+
+span {
+	margin: auto;
+}
 }
 
 /* Wrapping element */
@@ -34,4 +39,41 @@ body {
     }
 }
 
+
+.tile {
+	height: 120px;
+	width: 300px;
+	color: black;
+	display: inline-block;
+	text-align: right;
+	padding: 10px;
+}
+
+.tile1 {
+	background-color: azure;
+}
+
+.tile2 {
+	background-color:aliceblue;
+}
+
+.tile3 {
+	background-color:yellow;
+}
+
+.tile4 {
+	background-color:blanchedalmond;
+}
+
+.tile5 {
+	background-color:chartreuse;
+}
+
+.runt {
+	width: 605px;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+}
 

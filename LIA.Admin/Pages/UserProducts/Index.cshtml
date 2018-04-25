@@ -3,7 +3,7 @@
 @{
 	ViewData["Title"] = "Index";
 }
-<h2>user Products</h2>
+<h2>User Products</h2>
 <a class="btn btn-primary" asp-page="Create"><span class="glyphicon glyphicon-info-sign"> </span> Create New</a>
 <a class="btn btn-warning" asp-page="/Index"><span class="glyphicon glyphicon-list-alt"></span> Dashboard</a>
 <table class="table">
@@ -29,8 +29,7 @@
 					@Html.DisplayFor(modelItem => up.Product.Name)
 				</td>
 				<td>
-					<a class="btn btn-success glyphicon glyphicon-pencil" asp-page="./Edit" asp-route-id="@up.ProductId"></a>
-					<a class="btn btn-danger glyphicon glyphicon-remove" asp-page="./Delete" asp-route-id="@up.ProductId"></a>
+					<a class="btn btn-danger glyphicon glyphicon-remove" asp-page="./Delete" asp-route-productId="@up.ProductId" asp-route-userId="@up.UserId"></a>
 				</td>
 			</tr>
 		}
