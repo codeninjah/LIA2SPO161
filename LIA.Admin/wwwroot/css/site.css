@@ -42,19 +42,20 @@ span {
 
 .tile {
 	height: 120px;
-	width: 300px;
-	color: black;
+	width: 280px;
 	display: inline-block;
+	padding-top: 50px;
+	padding-right: 20px;
+	font-size: 30px;
 	text-align: right;
-	padding: 10px;
 }
 
 .tile1 {
-	background-color: azure;
+	background-color: deepskyblue;
 }
 
 .tile2 {
-	background-color:aliceblue;
+	background-color:red;
 }
 
 .tile3 {
@@ -62,7 +63,7 @@ span {
 }
 
 .tile4 {
-	background-color:blanchedalmond;
+	background-color:lawngreen;
 }
 
 .tile5 {
@@ -70,10 +71,34 @@ span {
 }
 
 .runt {
-	width: 605px;
+	width: 604px;
 	margin-top: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: auto;
 }
 
+.glyphicon {
+	opacity: 0.3;
+	color: gray;
+}
+
+/* unvisited link */
+a:link {
+	color: white;
+}
+
+/* visited link */
+a:visited {
+	color: white;
+}
+
+/* mouse over link */
+a:hover {
+	color: white;
+}
+
+/* selected link */
+a:active {
+	color: white;
+}
