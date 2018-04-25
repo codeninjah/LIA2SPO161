@@ -8,6 +8,9 @@
 <h2>Create</h2>
 
 <h4>Item</h4>
+
+<a class="btn btn-primary" asp-page="./Index"><span class="glyphicon glyphicon-info-sign"> </span> Back to list</a>
+	<a class="btn btn-warning" asp-page="/Index"><span class="glyphicon glyphicon-list-alt"></span> Dashboard</a>
 <hr />
 <div class="row">
 	<div class="col-md-4">
@@ -34,13 +37,10 @@
 				<span asp-validation-for="Items.Link" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<input type="submit" value="Create" class="btn btn-default" />
+				<input type="submit" value="Create" class="btn btn-success" />
 			</div>
 		</form>
 	</div>
 </div>
 
-<div>
-	<a asp-page="Index">Back to List</a>
-</div>
 
