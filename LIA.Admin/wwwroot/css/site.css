@@ -42,7 +42,7 @@ span {
 
 .tile {
 	height: 130px;
-	width: 250px;
+	width: 280px;
 	padding-top: 30px;
 	padding-right: 20px;
 	font-size: 20px;
@@ -82,29 +82,32 @@ span {
 
 .totheleft {
 	text-align: left;
-	float: left;
 	padding-left: 40px;
-	/*top: 180px;
-	position: absolute;*/
+	/*float: left;*/
 }
 
 .totheright {
+	top: -70px;	
+	position:relative;
+	margin-bottom: 60px;
 	text-align: right;
 	font-size: 60px;
-	/*position: absolute;
-	top: 133px;
-	left: 535px;*/
-	/*float: left;*/
+	/*padding-bottom: 40px;
+	float: right;*/
+	padding-right: 10px;
 }
 
 .footerthing {
 	margin-top: 500px;
 }
 
+.name {
+	/*padding-top: 40px;*/
+}
+
 .number {
 	font-size: 30px;
-	/*top: 120px;
-	position: absolute;*/
+	padding-left: 40px;
 }
 
 .glyphicon {
