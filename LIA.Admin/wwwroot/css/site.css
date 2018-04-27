@@ -41,13 +41,13 @@ span {
 
 
 .tile {
-	height: 120px;
-	width: 280px;
-	display: inline-block;
+	height: 130px;
+	width: 250px;
 	padding-top: 50px;
 	padding-right: 20px;
 	font-size: 30px;
 	text-align: right;
+	display: inline-block;
 }
 
 .tile1 {
