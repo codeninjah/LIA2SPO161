@@ -43,15 +43,16 @@ span {
 .tile {
 	height: 130px;
 	width: 250px;
-	padding-top: 50px;
+	padding-top: 30px;
 	padding-right: 20px;
-	font-size: 30px;
-	text-align: right;
+	font-size: 20px;
 	display: inline-block;
+	float: left;
 }
 
 .tile1 {
 	background-color: deepskyblue;
+
 }
 
 .tile2 {
@@ -76,6 +77,33 @@ span {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: auto;
+}
+
+.totheleft {
+	text-align: left;
+	float: left;
+	padding-left: 40px;
+	/*top: 180px;
+	position: absolute;*/
+}
+
+.totheright {
+	text-align: right;
+	font-size: 60px;
+	/*position: absolute;
+	top: 133px;
+	left: 535px;*/
+	/*float: left;*/
+}
+
+.footerthing {
+	margin-top: 500px;
+}
+
+.number {
+	font-size: 30px;
+	/*top: 120px;
+	position: absolute;*/
 }
 
 .glyphicon {
