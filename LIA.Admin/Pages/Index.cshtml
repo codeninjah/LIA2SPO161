@@ -4,31 +4,65 @@
 @{
 	ViewData["Title"] = "Home page";
 }
-<div class="runt">
+
+@*<div class="runt">
 	<div class="tile tile1">
-		<div class="totheleft number"><a href="./Items">@ViewBag.itemCount</a></div>
-		<div class="totheleft name"><a href="./Items">Items</a></div>
-		<div class="totheright"><span class="glyphicon glyphicon-film"></span></div>
+		<a class="totheleft number"  asp-page="./Items/Index">@ViewBag.itemCount</a>
+	    <a class="totheleft" asp-page="./Items/Index">Items</a>
+		<span class="glyphicon glyphicon-film totheright glyphicon-dashboardadmin"></span>
 	</div>
 	<div class="tile tile2">
-		<div class="totheleft number"><a href="./ItemTypes">@ViewBag.itemTypeCount</a></div>
-		<div class="totheleft name"><a href="./ItemTypes">ItemTypes</a></div>
-		<div class="totheright"><span class="glyphicon glyphicon-tags"></span></div>
+		<a class="totheleft number" asp-page="./ItemTypes/Index">@ViewBag.itemTypeCount</a>
+		<a class="totheleft" asp-page="./Items/ItemTypes">ItemTypes</a>
+		<div class="totheright"><span class="glyphicon glyphicon-tags glyphicon-dashboardadmin"></span></div>
 	</div>
 	<div class="tile tile3">
-		<div class="totheleft number"><a href="./ListItems">@ViewBag.listItemCount</a></div>
-		<div class="totheleft name"><a href="./ListItems">ListItems</a></div>
-		<div class="totheright"><span class="glyphicon glyphicon-list"></span></div>
+		<a class="totheleft number" asp-page="./ListItems/Index">@ViewBag.listItemCount</a>
+		<a class="totheleft" asp-page="./ListItems/Index">ItemTypes</a>
+		<div class="totheright"><span class="glyphicon glyphicon-tags glyphicon-dashboardadmin"></span></div>
+
 	</div>
 	<div class="tile tile4">
 		<div class="totheleft number"><a href="./Products">@ViewBag.productCount</a></div>
-		<div class="totheleft name"><a href="./Products">Products</a></div>
-		<div class="totheright"><span class="glyphicon glyphicon-folder-open"></span></div>
+		<div class="totheleft"><a href="./Products">Products</a></div>
+		<div class="totheright"><span class="glyphicon glyphicon-folder-open glyphicon-dashboardadmin"></span></div>
 	</div>
 	<div class="tile tile5">
 		<div class="totheleft number"><a href="./UserProducts">@ViewBag.userProductCount</a></div>
-		<div class="totheleft name"><a href="./UserProducts">UserProducts</a></div>
-		<div class="totheright"><span class="glyphicon glyphicon-blackboard"></span></div>
+		<div class="totheleft"><a href="./UserProducts">UserProducts</a></div>
+		<div class="totheright"><span class="glyphicon-blackboard glyphicon-dashboardadmin"></span></div>
+	</div>
+</div>*@
+
+<div class="dashboard row col-sm-offset-3">
+	<div class="list-group col-sm-3">
+		<a href="./Items/Index" class="list-group-item list-group-item-success tile-item-background">
+			@ViewBag.itemCount
+			<div>Items</div>
+			<span class="glyphicon glyphicon-film totheright glyphicon-dashboardadmin"></span>
+		</a>
+		<a href="./ItemTypes/Index" class="list-group-item list-group-item-success tile-item-type-background">
+			@ViewBag.itemTypeCount
+			<div>Item Types</div>
+			<span class="glyphicon glyphicon-tags glyphicon-dashboardadmin"></span>
+		</a>
+		<a href="./ListItems/Index" class="list-group-item list-group-item-info tile-user-background">
+			@ViewBag.listItemCount
+			<div>List Items</div>
+			<span class="glyphicon glyphicon-tags glyphicon-dashboardadmin"></span>
+			</a>
+	</div>
+	<div class="list-group col-sm-3">
+		<a href="./Products/Index" class="list-group-item tile-product-background ">
+			@ViewBag.productCount
+			<div>Products</div>
+			<span class="glyphicon glyphicon-folder-open glyphicon-dashboardadmin"></span>
+		</a>
+		<a href="./UserProducts/Index" class="list-group-item list-group-item-success ">
+			@ViewBag.userProductCount
+			<div>User Products</div>
+			<span class="glyphicon glyphicon-blackboard glyphicon-dashboardadmin"></span>
+		</a>
 	</div>
 </div>
 

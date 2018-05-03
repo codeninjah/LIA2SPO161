@@ -14,25 +14,25 @@
 
 <div class="panel col-sm-12 panel-default">
 	<img class="image-product" src="@Model.Product.Image">
-	
 		<div class="title">@Model.Product.Name</div>
-		<div class="panel-body">@Model.Product.Description
+		<div class="panel-body">
+			@Model.Product.Description
 		@foreach (var listitem in Model.ListItems)
-	{
+		{
 			<hr />
-		<div class="Itemtitle">@listitem.Name</div>
-		@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(2)))
-	{
-		<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">@item.Name</a>
-		<div>@item.Description</div>
-}
-		@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
-	{
-		<a href="@item.Link" target="_blank">@item.Name</a>
-		<div>@item.Description</div>
-}
-}
+			<div class="itemtitle">@listitem.Name</div>
+			@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(2)))
+			{
+				<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">@item.Name</a>
+				<div>@item.Description</div>
+			}
+			@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
+			{
+				<a href="@item.Link" target="_blank">@item.Name</a>
+				<div>@item.Description</div>
+			}
+		}
 	</div>
 </div>
-</div>
+
 

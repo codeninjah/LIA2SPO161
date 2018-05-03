@@ -51,24 +51,24 @@ span {
 	margin: 3px;
 }
 
-.tile1 {
+.tile-item-background {
 	background-color: deepskyblue;
 
 }
 
-.tile2 {
+.tile-item-type-background {
 	background-color:red;
 }
 
-.tile3 {
+.tile-user-background {
 	background-color:greenyellow;
 }
 
-.tile4 {
+.tile-product-background {
 	background-color:lawngreen;
 }
 
-.tile5 {
+.tile-color-background {
 	background-color:purple;
 }
 
@@ -80,29 +80,40 @@ span {
 	margin-bottom: auto;
 }
 
-.totheleft {
+/*.totheleft {
 	text-align: left;
 	padding-left: 40px;
-	/*float: left;*/
-}
-
+	/*float: left;
+} 
 .totheright {
-	top: -70px;	
-	position:relative;
-	margin-bottom: 60px;
+	top: 200px;	
+	position: absolute;
+	/*margin-bottom: 60px;
 	text-align: right;
 	font-size: 60px;
 	/*padding-bottom: 40px;
-	float: right;*/
+	float: right;
 	padding-right: 10px;
+}*/
+
+.dashboard a span{
+	position: absolute;
+	right:20px;
+	top:14px;
+	font-size: 40px;
+}
+
+.dashboard a {
+font-size: 18px;
+margin-top: 5px;
+}
+
+div.dashboard.row {
+	margin-top:20px;
 }
 
 .footerthing {
 	margin-top: 500px;
-}
-
-.name {
-	/*padding-top: 40px;*/
 }
 
 .number {
@@ -110,27 +121,27 @@ span {
 	padding-left: 40px;
 }
 
-.glyphicon {
-	opacity: 0.3;
+
+.glyphicon-dashboardadmin {
+	opacity: 0.5;
 	color: gray;
 }
-
-/* unvisited link */
-a:link {
+ 
+/*a:link {
 	color: white;
 }
 
 /* visited link */
-a:visited {
+/*a:visited {
 	color: white;
-}
+}*/
 
 /* mouse over link */
-a:hover {
-	color: white;
-}
+/*a:hover {
+	color: red;
+}*/
 
 /* selected link */
-a:active {
+/*a:active {
 	color: white;
-}
+}*/*/
