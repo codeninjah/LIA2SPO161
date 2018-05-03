@@ -18,6 +18,7 @@ namespace LIA2Version3.Data.Entities
 		[MaxLength(50)]
 		public string Description { get; set; }
 
-		//public ICollection<ItemType> ItemTypes { get; set; }
+		public int ListItemId { get; set; }
+		public ListItem ListItem { get; set; }
 	}
 }

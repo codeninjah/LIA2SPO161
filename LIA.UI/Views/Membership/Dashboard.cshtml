@@ -14,11 +14,11 @@
 			<div class="row">
 			@foreach (var product in products)
 			{
-				<div class="panel col-sm-4">
+				<div class="list-group col-sm-4">
 					<div class="aroundwborder">
 					<img class="image" src="@product.Image">
-						<div class="titledashboard list-group-item-heading list-group-item active">@product.Name</div>
-						<div class="list-group-item-text">@product.Description</div>
+						<h4 class="list-group-item-heading list-group-item active">@product.Name</h4>
+						<p class="list-group-item-text">@product.Description</p>
 						@*<div class="button-dashboard">*@
 						<div class="button-dashboard">
 							<a class="btn btn-primary button-dashboard" asp-controller="Membership" asp-action="Product" asp-route-productId="@product.Id">
