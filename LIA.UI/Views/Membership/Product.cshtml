@@ -7,12 +7,11 @@
 	ViewData["Title"] = "Product";
 }
 
-<h2>Product</h2>
 <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
 	Dashboard
 </a>
 
-<div class="panel col-sm-12 panel-default">
+<div class="panel product-panel col-sm-12 panel-default">
 	<img class="image-product" src="@Model.Product.Image">
 	<div class="panel-body">
 	<h3>@Model.Product.Name</h3>
@@ -26,10 +25,15 @@
 			<div class="panel-body">
 			@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(2)))
 			{
-				<div>
-					<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">@item.Name</a>
-					<span>@item.Description</span>
-				</div>
+				
+					<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">
+						<div class="panel-item">
+							@item.Name<span>@item.Description</span>
+						</div>
+
+					</a>
+					
+				
 			}
 			@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
 			{
