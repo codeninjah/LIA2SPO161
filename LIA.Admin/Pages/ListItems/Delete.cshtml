@@ -19,24 +19,7 @@
 		<dd>
 			@Html.DisplayFor(model => model.ListItem.Name)
 		</dd>
-		<dt>
-			@*<b>Item name:</b> @Html.DisplayNameFor(model => model.ListItem.Item.Name)
-		</dt>
-		<dd>
-			@Html.DisplayFor(model => model.ListItem.Item.Name)
-		</dd>
-		<dt>
-			<b>Product name:</b> @Html.DisplayNameFor(model => model.ListItem.Product.Name)
-		</dt>
-		<dd>
-			@Html.DisplayFor(model => model.ListItem.Product.Name)
-		</dd>
-		<dt>
-			<b>Description:</b> @Html.DisplayNameFor(model => model.ListItem.Description)
-		</dt>
-		<dd>
-			@Html.DisplayFor(model => model.ListItem.Description)
-		</dd>*@
+		
 	</dl>
 	<form method="post">
 		<input type="hidden" asp-for="ListItem.Id" />

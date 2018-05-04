@@ -11,7 +11,7 @@ namespace LIA2Version3.Data.Entities
 		[Key]
 		public int Id { get; set; }
 		public string Name { get; set; }
-		public int ItemId { get; set; }
+		//public int ItemId { get; set; }
 		public string Description { get; set; }
 		public int ProductId{ get; set; }
 

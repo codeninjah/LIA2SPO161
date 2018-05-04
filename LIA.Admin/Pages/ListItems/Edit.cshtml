@@ -22,10 +22,6 @@
 				<input asp-for="ListItem.Name" class="form-control" />
 				<span asp-validation-for="ListItem.Name" class="text-danger"></span>
 
-				<label asp-for="ListItem.ItemId" class="control-label"></label>
-				<select asp-for="ListItem.ItemId" class="form-control" asp-items="ViewBag.Items"></select>
-				<span asp-validation-for="ListItem.ItemId" class="text-danger"></span>
-
 				<label asp-for="ListItem.ProductId" class="control-label"></label>
 				<select asp-for="ListItem.ProductId" class="form-control" asp-items="ViewBag.Products"></select>
 				<span asp-validation-for="ListItem.ProductId" class="text-danger"></span>

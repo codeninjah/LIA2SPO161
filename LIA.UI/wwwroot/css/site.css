@@ -48,7 +48,7 @@ a:visited {
 
 
 h3, p, .panel-body, a {
-	color: #AAA;
+	color: #666;
 }
 
 .image {
@@ -124,7 +124,7 @@ a.btn, a:hover.btn a:visited.btn {
 	float: right;
 }
 
-.panel h4 {
+.panel h4  {
 	padding-left: 15px;
 	background-color: #337ab7;
 	color: #fff;
@@ -172,5 +172,13 @@ a:hover {
 	/*opacity: 0.5;*/
 }
 
+.videoplayer {
+	width: 50%;
+	height: 50%;
+	margin-top: 10px;
+}
 
+	.videoplayer p, .videoplayer h4{
+		color: #666;
+	}
 
