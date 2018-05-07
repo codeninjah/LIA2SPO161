@@ -1,4 +1,5 @@
-﻿using LIA2Version3.Data.Entities;
+﻿using LIA.Data.Data.Entities;
+using LIA2Version3.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace LIA.Data.Data
         DbSet<ListItem> ListItems { get; set; }
         DbSet<UserProduct> UserProducts { get; set; }
 		DbSet<User> Users { get; set; }
+		DbSet<Author> Authors { get; set; }
     }
 }

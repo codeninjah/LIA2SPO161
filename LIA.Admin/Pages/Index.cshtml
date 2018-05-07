@@ -36,6 +36,11 @@
 
 <div class="dashboard row col-sm-offset-3">
 	<div class="list-group col-sm-3">
+		<a href="./Authors/Index" class="list-group-item tile-author-background ">
+			@ViewBag.authorCount
+			<div>User Products</div>
+			<span class="glyphicon glyphicon-blackboard glyphicon-dashboardadmin"></span>
+		</a>
 		<a href="./Items/Index" class="list-group-item list-group-item-success tile-item-background">
 			@ViewBag.itemCount
 			<div>Items</div>
@@ -46,16 +51,16 @@
 			<div>Item Types</div>
 			<span class="glyphicon glyphicon-tags glyphicon-dashboardadmin"></span>
 		</a>
+	</div>
+	<div class="list-group col-sm-3">
 		<a href="./ListItems/Index" class="list-group-item list-group-item-info tile-user-background">
 			@ViewBag.listItemCount
 			<div>List Items</div>
 			<span class="glyphicon glyphicon-tags glyphicon-dashboardadmin"></span>
-			</a>
-	</div>
-	<div class="list-group col-sm-3">
+		</a>
 		<a href="./Products/Index" class="list-group-item tile-product-background ">
 			@ViewBag.productCount
-			<div>Products</div>
+			<div>Authors</div>
 			<span class="glyphicon glyphicon-folder-open glyphicon-dashboardadmin"></span>
 		</a>
 		<a href="./UserProducts/Index" class="list-group-item list-group-item-success ">

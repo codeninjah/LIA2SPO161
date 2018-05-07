@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LIA.Data.Data.Entities;
 using LIA.Data.Services;
 using LIA2Version3.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -34,16 +35,18 @@ namespace LIA.Admin.Pages
 			ViewData["listItemCount"] = counter.listItemCount;
 			ViewData["productCount"] = counter.productCount;
 			ViewData["userProductCount"] = counter.userProductCount;
+			ViewData["authorCount"] = counter.authorCount;
 		}
 
 
-		(int itemCount, int itemTypeCount, int listItemCount, int productCount, int userProductCount) Count()
+		(int itemCount, int itemTypeCount, int listItemCount, int productCount, int userProductCount, int authorCount) Count()
 			{
 			return (itemCount: _db.Get<Item>().Count(),
 				itemTypeCount: _db.Get<ItemType>().Count(),
 				listItemCount: _db.Get<ListItem>().Count(),
 				productCount: _db.Get<Product>().Count(),
-				userProductCount: _db.Get<UserProduct>().Count());
+				userProductCount: _db.Get<UserProduct>().Count(),
+				authorCount: _db.Get<Author>().Count());
 			}
 
 	}
