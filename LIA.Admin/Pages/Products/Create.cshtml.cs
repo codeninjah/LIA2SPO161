@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LIA.Data.Data.Entities;
+using LIA.Data.Services;
 using LIA2Version3.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,14 +16,17 @@ namespace LIA.Admin.Pages.Products
 	{
 		public IActionResult OnGet()
 		{
+			ViewData["Authors"] = _reader.GetSelectList<Author>("Id", "Name");
 			return Page();
 		}
 
 		private readonly LIA.Data.Services.IDbWriter _db;
+		private readonly IDbReader _reader;
 
-		public CreateModel(LIA.Data.Services.IDbWriter db)
+		public CreateModel(LIA.Data.Services.IDbWriter db, IDbReader reader)
 		{
 			_db = db;
+			_reader = reader;
 		}
 
 		[BindProperty]

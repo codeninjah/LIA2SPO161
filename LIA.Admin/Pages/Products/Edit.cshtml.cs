@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using LIA.Data.Data;
 using LIA2Version3.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
+using LIA.Data.Data.Entities;
 
 namespace LIA.Admin.Pages.Products
 {
@@ -33,6 +34,8 @@ namespace LIA.Admin.Pages.Products
 			{
 				return NotFound();
 			}
+
+			ViewData["Authors"] = _reader.GetSelectList<Author>("Id", "Name");
 
 			Product = await _reader.Get<Product>((int)id);
 
