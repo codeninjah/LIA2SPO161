@@ -14,37 +14,49 @@
 <div class="panel product-panel col-sm-12 panel-default">
 	<img class="image-product" src="@Model.Product.Image">
 	<div class="panel-body">
-	<h3>@Model.Product.Name</h3>
-	@Model.Product.Description
-		</div>
+		<h3>@Model.Product.Name</h3>
+		@Model.Product.Description
+	</div>
 </div>
-	@foreach (var listitem in Model.ListItems)
-	{
-		<div class="panel">
+<div class="row">
+	<div class="panel col-sm-8">
+		@foreach (var listitem in Model.ListItems)
+		{
 			<h4>@listitem.Name</h4>
 			<div class="panel-body">
-			@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(2)))
-			{
-				
+				@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(2)))
+				{
+
 					<a asp-controller="Membership" asp-action="Item" asp-route-itemId="@item.Id">
 						<div class="panel-item">
 							@item.Name<span>@item.Description</span>
 						</div>
-
 					</a>
-					
-				
-			}
-			@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
-			{
-				<div>
-					<a href="@item.Link" target="_blank">@item.Name</a>
-					<span>@item.Description</span>
-				</div>
-			}
-				</div>
+
+
+
+
+				}
+				@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
+				{
+					<div>
+						<a href="@item.Link" target="_blank">@item.Name</a>
+						<span>@item.Description</span>
+					</div>
+				}
+			</div>
+
+		}
+	</div>
+	<div class="col-sm-3 author-panel">
+		<div class="authorbox">
+			<p>@Model.Product.Author.Name</p>
+
+			<p>@Model.Product.Author.Description</p>
 		</div>
-	}
-	
+	</div>
+</div>
+
+<div class="authorbox">klkglkg</div>
 
 

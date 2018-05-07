@@ -48,7 +48,11 @@ namespace LIA.UI.Controllers
 
 		public IActionResult Product(int productId)
 		{
-			var product = _reader.Get<Product>(productId).Result;
+			var product = _reader.GetWithIncludes<Product>().FirstOrDefault(
+				p => p.Id.Equals(productId));
+
+			//var author = _reader.GetWithIncludes<Product>().FirstOrDefault(
+			//	p => p.Id.Equals(productId));
 			//var module = _reader.Get<ListItem>()
 			//	.Where(x => x.ProductId == productId);
 

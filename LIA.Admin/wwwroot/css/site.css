@@ -6,7 +6,6 @@ body {
 span {
 	margin: auto;
 }
-}
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
@@ -84,22 +83,6 @@ span {
 	margin-bottom: auto;
 }
 
-/*.totheleft {
-	text-align: left;
-	padding-left: 40px;
-	/*float: left;
-} 
-.totheright {
-	top: 200px;	
-	position: absolute;
-	/*margin-bottom: 60px;
-	text-align: right;
-	font-size: 60px;
-	/*padding-bottom: 40px;
-	float: right;
-	padding-right: 10px;
-}*/
-
 .dashboard a span{
 	position: absolute;
 	right:20px;
@@ -130,22 +113,8 @@ div.dashboard.row {
 	opacity: 0.5;
 	color: gray;
 }
- 
-/*a:link {
-	color: white;
+
+.author-panel {
+	/*border: 1px solid #CCC;*/
+	background-color: yellow !important;
 }
-
-/* visited link */
-/*a:visited {
-	color: white;
-}*/
-
-/* mouse over link */
-/*a:hover {
-	color: red;
-}*/
-
-/* selected link */
-/*a:active {
-	color: white;
-}*/*/
