@@ -28,7 +28,7 @@
 				<td>
 					@Html.DisplayFor(modelItem => up.Product.Name)
 				</td>
-				<td>
+				<td class="user-product-button">
 					<a class="btn btn-danger glyphicon glyphicon-remove" asp-page="./Delete" asp-route-productId="@up.ProductId" asp-route-userId="@up.UserId"></a>
 				</td>
 			</tr>

@@ -11,15 +11,16 @@
 	Dashboard
 </a>
 
-<div class="panel product-panel col-sm-12 panel-default">
-	<img class="image-product" src="@Model.Product.Image">
-	<div class="panel-body">
-		<h3>@Model.Product.Name</h3>
-		@Model.Product.Description
-	</div>
-</div>
 <div class="row">
-	<div class="panel col-sm-8">
+	<div class="panel product-panel col-sm-12 panel-default">
+		<img class="image-product" src="@Model.Product.Image">
+		<div class="panel-body">
+			<h3>@Model.Product.Name</h3>
+			@Model.Product.Description
+		</div>
+	</div>
+	</div>
+	<div class="panel col-sm-9">
 		@foreach (var listitem in Model.ListItems)
 		{
 			<h4>@listitem.Name</h4>
@@ -48,13 +49,12 @@
 
 		}
 	</div>
-	<div class="col-sm-4 author-panel">
-		<div class="authorbox">
-			<h4>@Model.Product.Author.Name</h4>
-			<p>@Model.Product.Author.Description</p>
-			<p class="instructor">Instructor</p>
-		</div>
+	<div class="col-sm-2 col-sm-offset-1 authorbox author-panel">
+		<img src="@Model.Product.Author.Picture" class="img-circle" />
+		<h4>@Model.Product.Author.Name</h4>
+		<p>@Model.Product.Author.Description</p>
+		<p class="instructor">Instructor</p>
 	</div>
-</div>
+
 
 

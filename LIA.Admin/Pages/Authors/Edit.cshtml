@@ -27,6 +27,12 @@
 			</div>
 
 			<div class="form-group">
+				<label asp-for="Author.Picture" class="control-label"></label>
+				<input asp-for="Author.Picture" class="form-control" />
+				<span asp-validation-for="Author.Picture" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
 				<input type="submit" value="Save" class="btn btn-success" />
 			</div>
 		</form>

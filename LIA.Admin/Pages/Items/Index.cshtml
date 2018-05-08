@@ -44,7 +44,7 @@
 			<td>
 				@Html.DisplayFor(modelItem => item.Link)
 			</td>
-			<td>
+			<td class="buttonstoright">
 				<a class="btn btn-success glyphicon glyphicon-pencil" asp-page="./Edit" asp-route-id="@item.Id"></a> 
 				<a class="btn btn-danger glyphicon glyphicon-remove" asp-page="./Delete" asp-route-id="@item.Id"></a>
 			</td>

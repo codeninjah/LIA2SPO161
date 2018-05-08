@@ -72,7 +72,7 @@ span {
 }
 
 .tile-author-background {
-	background-color: purple;
+	background-color: #999;
 }
 
 .runt {
@@ -117,4 +117,14 @@ div.dashboard.row {
 .author-panel {
 	/*border: 1px solid #CCC;*/
 	background-color: yellow !important;
+}
+
+tbody .buttonstoright {
+	width: 102px;
+	min-width: 102px;
+}
+
+.user-product-button {
+	width: 51px;
+	min-width: 51px;
 }

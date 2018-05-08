@@ -20,23 +20,29 @@
 			<th>
 				@Html.DisplayNameFor(model => model.Authors[0].Description)
 			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Authors[0].Picture)
+			</th>
 		</tr>
 	</thead>
 	<tbody>
 		@foreach (var item in Model.Authors)
 		{
-			<tr>
-				<td>
-					@Html.DisplayFor(modelItem => item.Name)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.Description)
-				</td>
-				<td>
-					<a class="btn btn-success glyphicon glyphicon-pencil" asp-page="./Edit" asp-route-id="@item.Id"></a>
-					<a class="btn btn-danger glyphicon glyphicon-remove" asp-page="./Delete" asp-route-id="@item.Id"></a>
-				</td>
-			</tr>
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Name)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Description)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Picture)
+			</td>
+			<td class="buttonstoright">
+				<a class="btn btn-success glyphicon glyphicon-pencil" asp-page="./Edit" asp-route-id="@item.Id"></a>
+				<a class="btn btn-danger glyphicon glyphicon-remove" asp-page="./Delete" asp-route-id="@item.Id"></a>
+			</td>
+		</tr>
 		}
 	</tbody>
 </table>
