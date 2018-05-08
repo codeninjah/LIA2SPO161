@@ -31,10 +31,14 @@
 				<label asp-for="Items.ItemTypeId" class="control-label"></label>
 				<select asp-for="Items.ItemTypeId" class="form-control" asp-items="ViewBag.ItemTypes"></select>
 
+				<label asp-for="Items.ListItemId" class="control-label"></label>
+				<select asp-for="Items.ListItemId" class="form-control" asp-items="ViewBag.ListItems"></select>
+
 				<span asp-validation-for="Items.ItemTypeId" class="text-danger"></span>
 				<span asp-validation-for="Items.Description" class="text-danger"></span>
 				<span asp-validation-for="Items.Name" class="text-danger"></span>
 				<span asp-validation-for="Items.Link" class="text-danger"></span>
+				<span asp-validation-for="Items.ListItemId" class="text-danger"></span>
 			</div>
 			<div class="form-group">
 				<input type="submit" value="Create" class="btn btn-success" />

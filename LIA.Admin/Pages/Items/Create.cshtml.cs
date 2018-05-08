@@ -25,6 +25,7 @@ namespace LIA.Admin.Pages.Items
 		public void OnGet()
 		{
 			ViewData["ItemTypes"] = _reader.GetSelectList<ItemType>("Id", "Name");
+			ViewData["ListItems"] = _reader.GetSelectList<ListItem>("Id", "Name");
 			//ViewData["Products"] = _reader.GetSelectList<Product>("Id", "Name");
 		}
 
