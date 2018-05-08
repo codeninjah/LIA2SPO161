@@ -175,10 +175,23 @@ a:hover {
 .videoplayer {
 	width: 50%;
 	height: 50%;
-	margin-top: 10px;
+	margin-top: 11px;
 }
 
 	.videoplayer p, .videoplayer h4{
 		color: #666;
 	}
 
+.authorbox {
+	border: 1px solid #CCC;
+	margin-top: 11px;
+	padding-left: 10px;
+	color: #999;
+	line-height: 6px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+	.authorbox p.instructor {
+		color: #337ab7;
+	}

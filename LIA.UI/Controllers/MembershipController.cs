@@ -51,6 +51,7 @@ namespace LIA.UI.Controllers
 			var product = _reader.GetWithIncludes<Product>().FirstOrDefault(
 				p => p.Id.Equals(productId));
 
+
 			//var author = _reader.GetWithIncludes<Product>().FirstOrDefault(
 			//	p => p.Id.Equals(productId));
 			//var module = _reader.Get<ListItem>()
@@ -80,11 +81,17 @@ namespace LIA.UI.Controllers
 		
 		public async Task<IActionResult> Item(int itemId)
 		{
-			var item = await _reader.Get<Item>(itemId);
+			var item = _reader.GetWithIncludes<Item>().FirstOrDefault(
+				p => p.Id.Equals(itemId));
+
+			var author = _reader.GetWithIncludes<Product>().FirstOrDefault(
+				p => p.Id.Equals(item.ListItem.ProductId)).Author;
+
+			var model = new ItemViewModel { Author = author, Item = item };
 
 			//var model = new ProductViewModel { Product = product, ListItems = module.ToList() };
 
-			return View(item);
+			return View(model);
 		}
 	}
 
