@@ -40,17 +40,22 @@
 				}
 				@foreach (var item in listitem.Items.Where(i => i.ItemTypeId.Equals(8004)))
 				{
-					<div>
-						<a href="@item.Link" target="_blank">@item.Name</a>
-						<span>@item.Description</span>
-					</div>
+							
+					<a href="@item.Link" target="_blank">
+						<div class="panel-item">
+							@item.Name
+
+
+							<span>@item.Description</span>
+						</div>
+					</a>
 				}
 			</div>
 
 		}
 	</div>
 	<div class="col-sm-2 col-sm-offset-1 authorbox author-panel">
-		<img src="@Model.Product.Author.Picture" class="img-circle" />
+		<img src="~/images/j.jpg" class="img-circle" />
 		<h4>@Model.Product.Author.Name</h4>
 		<p>@Model.Product.Author.Description</p>
 		<p class="instructor">Instructor</p>

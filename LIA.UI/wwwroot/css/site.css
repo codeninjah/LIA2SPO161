@@ -189,7 +189,7 @@ a:hover {
 	margin-top: 11px;
 	padding-left: 10px;
 	color: #999;
-	line-height: 6px;
+	/*line-height: 6px;*/
 	text-align: center;
 	padding-bottom: 5px;
 }

@@ -16,7 +16,13 @@
 			<th>
 				@Html.DisplayNameFor(model => model.ListItem[0].Name)
 			</th>
-			<th></th>
+			<th>
+				@*@Html.DisplayNameFor(model => model.ListItem[0].Product.Name)*@
+				Product Name
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.ListItem[0].Product.Description)
+			</th>
 		</tr>
 	</thead>
 	<tbody>
